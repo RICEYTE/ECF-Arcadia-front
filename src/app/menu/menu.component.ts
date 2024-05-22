@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-menu',
@@ -13,8 +14,12 @@ import { RouterModule } from '@angular/router';
   styleUrl: './menu.component.scss'
 })
 export class MenuComponent {
-  authService: any;
 
+constructor(
+  public authService: AuthService
+){
+
+}
   login() {
     this.authService.session = {
       name: 'Christophe',

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbCarouselConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from "./header/header.component";
 import { FooterComponent } from "./footer/footer.component";
 
@@ -9,15 +9,18 @@ import { FooterComponent } from "./footer/footer.component";
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss',
+    providers:[NgbCarouselConfig],
     imports: [RouterOutlet, HeaderComponent, FooterComponent]
 })
 export class AppComponent {
   title = 'ECF-Arcadia-front';
 
-  constructor(private modalService: NgbModal) {
+
+  constructor(config: NgbCarouselConfig) {
+    // 
+    config.interval = 2000;
+    config.keyboard = true;
+    config.pauseOnHover = true;
   }
 
-  public open(modal: any): void {
-    this.modalService.open(modal);
-  }
 }

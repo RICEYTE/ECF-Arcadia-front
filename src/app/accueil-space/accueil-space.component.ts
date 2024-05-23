@@ -7,6 +7,7 @@ import { AvisListComponent } from "../avis-list/avis-list.component";
 import { AnimalsListComponent } from "../animals-list/animals-list.component";
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { HabitatsListComponent } from "../habitats-list/habitats-list.component";
 
 @Component({
     selector: 'app-accueil-space',
@@ -14,13 +15,13 @@ import { RouterModule } from '@angular/router';
     templateUrl: './accueil-space.component.html',
     styleUrl: './accueil-space.component.scss',
     imports: [
-      CommonModule,
-      RouterModule,
-      PresentationComponent, 
-      ServicesListComponent, 
-      AvisListComponent, 
-      AnimalsListComponent,
-  
+        CommonModule,
+        RouterModule,
+        PresentationComponent,
+        ServicesListComponent,
+        AvisListComponent,
+        AnimalsListComponent,
+        HabitatsListComponent
     ]
 })
 export class AccueilSpaceComponent {

@@ -1,2 +1,21 @@
-<h1>Nos Animaux</h1>
-Not implemented...
+<h2>Nos animaux</h2>
+
+<div class="container">
+
+    <div class="row">
+        <div *ngFor="let animal of animalList; let index=index">
+            <div  *ngIf="(index + 0) % 1 == 0" (click)="goToAnimal(animal)">
+           
+                    <img [src]="animal.picture" width="100%" />
+
+                    <h2>{{ animal.race }}</h2>
+                    <p>{{ animal.description }}</p>
+
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+
+<router-outlet></router-outlet>

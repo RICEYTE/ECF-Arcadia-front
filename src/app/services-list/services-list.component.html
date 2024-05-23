@@ -1,2 +1,12 @@
 <h1>Nos Services</h1>
-Not implemented...
+<div>
+    <td *ngFor="let service of serviceList">
+        <button>
+            <img [src]="service.picture" width="300" height="200" />
+        </button>
+        <tr>
+            <p>{{service.name}}</p>
+        </tr>
+    </td>
+
+</div>

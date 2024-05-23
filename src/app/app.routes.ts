@@ -8,11 +8,12 @@ import { HabitatsListComponent } from './habitats-list/habitats-list.component';
 import { AnimalsListComponent } from './animals-list/animals-list.component';
 import { AnimalDetailComponent } from './animal-detail/animal-detail.component';
 import { HabitatsDetailComponent } from './habitats-detail/habitats-detail.component';
+import { ServicesListComponent } from './services-list/services-list.component';
 
 export const routes: Routes = [
     { path: '', component: AccueilSpaceComponent },
     { path: 'accueil', component: AccueilSpaceComponent },
-    { path: 'services', component: ServiceSpaceComponent },
+    { path: 'services', component: ServicesListComponent },
     { path: 'habitats', component: HabitatsListComponent },
     { path: 'contact', component: ContactSpaceComponent },
     { path: 'animals', component: AnimalsListComponent },

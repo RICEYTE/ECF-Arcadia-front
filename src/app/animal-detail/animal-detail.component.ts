@@ -2,11 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { Animal } from '../animal/animal';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ANIMALS } from '../animal/mock-animals';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-animal-detail',
   standalone: true,
-  imports: [],
+  imports: [
+    NgIf
+  ],
   templateUrl: './animal-detail.component.html',
   styleUrl: './animal-detail.component.scss'
 })
@@ -35,7 +38,7 @@ export class AnimalDetailComponent implements OnInit{
     }
   
     goToEditAnimal(animal: Animal) {
-      this.router.navigate(['/edit/animal', animal.id]);
+      this.router.navigate(['/animal', animal.id]);
     }
   }
 

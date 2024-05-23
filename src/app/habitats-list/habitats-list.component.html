@@ -1,17 +1,15 @@
 <h1>Nos Habitats</h1>
 
+<div>
 
-<table>
-  <td>
-        <img src="assets/images/habitats/jungle.jpeg" width="300"/>
 
-  </td>
-  <td>
-          <img src="assets/images/habitats/savane.jpeg" width="300"/>
+    <td *ngFor="let habitat of habitatsList">
+        <button (click)="goToHabitat(habitat)">
+            <img [src]="habitat.picture" width="300" height="200" />
+        </button>
+        <tr>
+            <p>{{habitat.name}}</p>
+        </tr>
+    </td>
 
-        </td>
-        <td>
-            <img src="assets/images/habitats/marais.jpeg" width="300"/>
-  
-          </td>
-         </table>
+</div>

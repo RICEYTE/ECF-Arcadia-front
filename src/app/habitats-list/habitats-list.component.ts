@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HABITATS } from '../habitat/mock-habitats';
 import { Habitat } from '../habitat/habitat';
 import { Router, RouterModule } from '@angular/router';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgFor } from '@angular/common';
 import { NgbCarousel } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -12,6 +12,7 @@ import { NgbCarousel } from '@ng-bootstrap/ng-bootstrap';
     CommonModule,
     RouterModule,
     NgbCarousel,
+    NgFor
     
   ],
   templateUrl: './habitats-list.component.html',
